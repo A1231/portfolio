@@ -71,6 +71,4 @@ npm run preview
 npm run lint
 ```
 
-## License
 
-Private — All rights reserved.

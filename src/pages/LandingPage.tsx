@@ -11,7 +11,7 @@ const phrases = [
 function LandingPage() {
     const text = useTypewriter(phrases);
     return (
-        <div className="mb-8 flex flex-row items-center justify-center gap-8 flex-wrap flex-1 sm:mb-16">
+        <div className="mb-40 flex flex-row items-center justify-center gap-8 flex-wrap flex-1 sm:mb-16">
             <Image />
             <div className="text-2xl font-semibold text-accent font-mono p-3">
             <div className="text-4xl font-bold font-mono text-text mb-16">Hi, I'm Apoorva.</div>

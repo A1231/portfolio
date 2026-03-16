@@ -23,7 +23,7 @@ const projects: ProjectData[] = [
             frontend: ["React", "TypeScript", "React Router", "Vite", "Tailwind CSS", "Lucide Icons", "React Icons", "Component based UI", "Client Side routing","SPA","Custom hooks"],
             
         },
-        githubUrl: "",
+        githubUrl: "https://github.com/A1231/portfolio",
     },
     {
         title: "Custom CPU Process Scheduler",
@@ -57,13 +57,13 @@ const projects: ProjectData[] = [
     {
         title: "Employee Management API",
         description:
-            "A production-ready RESTful API for managing employee records, built with Spring Boot 4 and Java 17. The API features full CRUD operations secured behind a three-tier Role-Based Access Control system (Employee, Manager, Admin) powered by Spring Security with database-backed authentication. Every request is validated using Jakarta Bean Validation, and the entire API is self-documented through an interactive Swagger UI powered by OpenAPI 3.0. Built with a clean layered architecture separating controllers, services, and repositories - the same patterns used in enterprise Java backends.",
+            "Production-ready REST API for employee records using Spring Boot 4 and Java 17, featuring full CRUD operations, RBAC (Employee/Manager/Admin) via Spring Security, request validation with Jakarta Bean Validation, and interactive Swagger/OpenAPI 3.0 documentation. Built with clean layered architecture (controllers, services, repositories) following enterprise Java best practices",
         techStack: {
             
-            backend: ["Java", "Spring Boot", "Spring Web MVC", "Spring Data JPA", "Hibernate ORM", "Jakarta Bean Validation", "REST API", "CRUD", "DTO Pattern", "Layered Architecture", "Dependency Injection", "Repository Pattern", "Service Layer Pattern", "OpenAPI 3.0", "Swagger UI", "SpringDoc", "JUnit 5"],
+            backend: ["Java", "Spring Boot", "Spring Web MVC", "REST API", "Spring Data JPA","CRUD", "Hibernate ORM", "Jakarta Bean Validation",   "DTO Pattern", "JUnit 5", "Layered Architecture", "Dependency Injection", "Repository Pattern", "Service Layer Pattern", "OpenAPI 3.0", "Swagger UI", "SpringDoc", ],
             infraAndDevOps: ["Maven", "Spring Boot DevTools", "Git", "Version Control"],
-            security: ["Spring Security", "Role-Based Access Control (RBAC)", "HTTP Basic Authentication", "JDBC Authentication", "JdbcUserDetailsManager", "Custom AuthenticationEntryPoint", "SecurityFilterChain", "Least-Privilege Access",  "Authorization", "Authentication"],
-            dataStore: ["H2 Database (In-Memory RDBMS)", "JPA/Hibernate ORM", "Spring Data JPA Repository", "SQL", "Custom SQL Queries", "Database-Backed User Management", "Relational Schema Design", "Foreign Key Constraints"],
+            security: ["Spring Security", "RBAC", "HTTP Basic Authentication", "JDBC Authentication", "JdbcUserDetailsManager", "SecurityFilterChain", "Least-Privilege Access",  "Authorization", "Authentication"],
+            dataStore: ["H2 Database (In-Memory RDBMS)", "Spring Data JPA Repository", "SQL", "Custom SQL Queries", "Database-Backed User Management", "Relational Schema Design", "Foreign Key Constraints"],
         },
         githubUrl: "https://github.com/A1231/employee-management-api",
     },

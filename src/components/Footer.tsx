@@ -74,7 +74,7 @@ function Footer() {
   return (
     <div className="border-t border-border py-6 px-4">
       <div className="flex flex-wrap items-center justify-center gap-4">
-        <span className="text-muted text-sm font-medium mr-2">Skills:</span>
+        <span className="text-muted text-sm font-bold mr-2 font-mono">Skills:</span>
         {skills.map(({ Icon, label, color }) => (
           <div
             key={label}

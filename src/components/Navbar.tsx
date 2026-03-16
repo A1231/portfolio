@@ -1,4 +1,3 @@
-import { Link, NavLink } from "react-router-dom"
 import {Menu, X} from "lucide-react"
 import { useState } from "react"
 import NavItem from "./NavItem"
@@ -32,28 +31,35 @@ function Navbar() {
 
         
 
-    {/*Mobile Menu*/}
-    
+    {/*Mobile Menu - Drawer */}
+        <div className="bg-surface/50 border border-border rounded-md p-2 fixed top-2.5 right-5 z-60 sm:hidden cursor-pointer">
+          {!isOpen && <Menu onClick={toggleMenu} />}
+          {isOpen && <X onClick={toggleMenu} />}
+        </div>
 
-        <div className="bg-surface/50 border border-border rounded-md p-2 fixed top-2.5 right-5 z-50 sm:hidden cursor-pointer">
-      {!isOpen && <Menu onClick={toggleMenu}  />}
-      {isOpen && <X onClick={toggleMenu}  />}
-      </div>
+        {/* Backdrop - blur overlay */}
+        <div
+          className={`fixed inset-0 z-40 sm:hidden transition-opacity duration-300 ${
+            isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
+          onClick={toggleMenu}
+          aria-hidden={!isOpen}
+        >
+          <div className="absolute inset-0 bg-bg/60 backdrop-blur-sm" />
+        </div>
 
-      <div className="justify-end sm:hidden fixed inset-x-0 top-10 flex flex-col gap-4 items-center">
-      
-      {isOpen && (
-        <>
-        
-         
-            <Link to="/projects"> <div className="bg-surface/50 border border-border rounded-md p-1 flex flex-col gap-4 w-full items-center hover:bg-accent-light/20">Projects</div></Link> 
-            
-            <Link to="/experience">Experience</Link>
-            <Link to="/education">Education</Link>
-            <Link to="/contact">Contact</Link>
-    
-            </>)}
-
+        {/* Drawer */}
+        <div
+          className={`fixed top-0 right-0 h-full w-64 max-w-[85vw] bg-surface border-l border-border z-50 sm:hidden
+            flex flex-col gap-6 pt-16 px-6 shadow-xl
+            transition-transform duration-300 ease-out
+            ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+        >
+          <NavItem to="/" onClick={toggleMenu}>home</NavItem>
+          <NavItem to="/projects" onClick={toggleMenu}>projects</NavItem>
+          <NavItem to="/experience" onClick={toggleMenu}>experience</NavItem>
+          <NavItem to="/education" onClick={toggleMenu}>education</NavItem>
+          <NavItem to="/contact" onClick={toggleMenu}>contact</NavItem>
         </div>
 
         
