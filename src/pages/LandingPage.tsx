@@ -22,7 +22,10 @@ function LandingPage() {
         {text}
         <span className="animate-[blink_0.9s_step-end_infinite]">|</span>
       </span>
-      
+      <p className="text-muted text-sm font-normal mt-4 max-w-md">
+        I enjoy building systems where performance, correctness, and security intersect.
+        Interested in distributed systems, real-time communication, caching, and secure auth.
+      </p>
     </div>
   
 
